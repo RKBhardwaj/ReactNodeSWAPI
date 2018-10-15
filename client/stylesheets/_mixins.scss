@@ -1,0 +1,31 @@
+/**
+* hl - horizontal length
+* vl - vertical length
+* br - blur radius
+* sr - spread radius
+* color - shadow color
+* type inset or outset, default outset
+**/
+@mixin box-shadow ($hl, $vl, $br, $sr, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $hl $vl $br $sr $color;
+           -moz-box-shadow: inset $hl $vl $br $sr $color;
+            -ms-box-shadow: inset $hl $vl $br $sr $color;
+                box-shadow: inset $hl $vl $br $sr $color;
+    } @else {
+        -webkit-box-shadow: $hl $vl $br $sr $color;
+           -moz-box-shadow: $hl $vl $br $sr $color;
+            -ms-box-shadow: $hl $vl $br $sr $color;
+                box-shadow: $hl $vl $br $sr $color;
+    }
+}
+
+/**
+* border radius
+**/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}

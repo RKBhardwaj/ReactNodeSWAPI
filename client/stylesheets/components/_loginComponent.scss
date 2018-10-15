@@ -1,0 +1,28 @@
+.login-container {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background: $color-white;
+    padding: 25px;
+    width:60%;
+    border: 1px solid #f1f1f1;
+    @include border-radius(5px);
+    @include box-shadow(10px, 10px, 0, 0, $color-shadow);
+
+    .error-msg {
+        border: 1px solid $color-red;
+        background: $color-pink;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 96%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+        span {
+            color: $color-red;
+            font-size:12px;
+        }
+    }
+}
